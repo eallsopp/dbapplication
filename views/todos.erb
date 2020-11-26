@@ -1,0 +1,30 @@
+
+<ul id="todos">
+  <% @list %>
+    <li>
+      <a>
+        <h2> </h2>
+        <p><%= @list[:todos] %></p>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<a href="/lists/new">New List </a>
+
+
+<form action="/lists/:id" method="post">
+  <dl>
+    <dt>
+
+      <label for="list_name"> Enter the name for your new todo:</label>
+      </dt>
+      <dd>
+        <input name="list_name" placeholder="List Name" type="text" value="">
+      </dd>
+  </dl>
+<fieldset class="actions">
+    <input type="submit" value="Save">
+    <a href="/lists">Cancel</a>
+  </fieldset>
+</form>

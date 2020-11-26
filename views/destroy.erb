@@ -1,0 +1,8 @@
+<h3><% session[:lists].each do |list| %>
+  <ul><li><%= list %></li></ul>
+</h3>
+<% end %>
+
+<form action="/lists/destroy" method="post" class="delete">
+  <button type="submit">Delete</button>
+</form>

@@ -1,0 +1,60 @@
+current directory: /home/ealls/Desktop/Sinatra/sinatra_todos/vendor/bundle/ruby/2.5.0/gems/nio4r-2.5.4/ext/nio4r
+/usr/bin/ruby2.5 -r ./siteconf20201024-18898-1hprggp.rb extconf.rb --with-cflags=-std=c99
+checking for unistd.h... yes
+checking for linux/aio_abi.h... yes
+checking for sys/select.h... yes
+checking for port_event_t in poll.h... no
+checking for sys/epoll.h... yes
+checking for sys/event.h... no
+checking for port_event_t in port.h... no
+checking for sys/resource.h... yes
+creating Makefile
+
+current directory: /home/ealls/Desktop/Sinatra/sinatra_todos/vendor/bundle/ruby/2.5.0/gems/nio4r-2.5.4/ext/nio4r
+make "DESTDIR=" clean
+
+current directory: /home/ealls/Desktop/Sinatra/sinatra_todos/vendor/bundle/ruby/2.5.0/gems/nio4r-2.5.4/ext/nio4r
+make "DESTDIR="
+compiling bytebuffer.c
+In file included from /usr/include/ruby-2.5.0/ruby/ruby.h:2040:0,
+                 from /usr/include/ruby-2.5.0/ruby.h:33,
+                 from nio4r.h:10,
+                 from bytebuffer.c:1:
+/usr/include/ruby-2.5.0/ruby/intern.h:887:29: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+ void rb_timespec_now(struct timespec *);
+                             ^~~~~~~~
+/usr/include/ruby-2.5.0/ruby/intern.h:890:41: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+ VALUE rb_time_timespec_new(const struct timespec *, int);
+                                         ^~~~~~~~
+compiling monitor.c
+In file included from /usr/include/ruby-2.5.0/ruby/ruby.h:2040:0,
+                 from /usr/include/ruby-2.5.0/ruby.h:33,
+                 from nio4r.h:10,
+                 from monitor.c:6:
+/usr/include/ruby-2.5.0/ruby/intern.h:887:29: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+ void rb_timespec_now(struct timespec *);
+                             ^~~~~~~~
+/usr/include/ruby-2.5.0/ruby/intern.h:890:41: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+ VALUE rb_time_timespec_new(const struct timespec *, int);
+                                         ^~~~~~~~
+compiling nio4r_ext.c
+In file included from nio4r_ext.c:6:0:
+../libev/ev.c:1867:31: warning: ‘ev_default_loop_ptr’ initialized and declared ‘extern’
+   EV_API_DECL struct ev_loop *ev_default_loop_ptr = 0; /* needs to be initialised to make it a definition despite extern */
+                               ^~~~~~~~~~~~~~~~~~~
+compiling selector.c
+In file included from /usr/include/ruby-2.5.0/ruby/ruby.h:2040:0,
+                 from /usr/include/ruby-2.5.0/ruby.h:33,
+                 from nio4r.h:10,
+                 from selector.c:6:
+/usr/include/ruby-2.5.0/ruby/intern.h:887:29: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+ void rb_timespec_now(struct timespec *);
+                             ^~~~~~~~
+/usr/include/ruby-2.5.0/ruby/intern.h:890:41: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+ VALUE rb_time_timespec_new(const struct timespec *, int);
+                                         ^~~~~~~~
+linking shared-object nio4r_ext.so
+
+current directory: /home/ealls/Desktop/Sinatra/sinatra_todos/vendor/bundle/ruby/2.5.0/gems/nio4r-2.5.4/ext/nio4r
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20201024-18898-1uzyarq
