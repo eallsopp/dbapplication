@@ -1,1 +1,1 @@
-A todolist application utilizingthe Sinatra framework and PostgreSQL with Ruby
+A To-Do list application utilizing the Sinatra framework and PostgreSQL with Ruby
