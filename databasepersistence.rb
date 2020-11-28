@@ -3,8 +3,7 @@ require "pg"
 class DatabasePersistence
   def initialize(logger)
     @db = if Sinatra::Base.production?
-            PG.connect(dbname: ENV['ec2-35-168-77-215.compute-1.amazonaws.com:5432/d7sud06qsmgap9
-'])
+            PG.connect(dbname: ENV['postgresql-cylindrical-18144'])
           else
             PG.connect(dbname: "todos")
           end      
