@@ -3,7 +3,8 @@ require "pg"
 class DatabasePersistence
   def initialize(logger)
     @db = if Sinatra::Base.production?
-            PG.connect(dbname: ENV['https://eallsopp-todos-app.herokuapp.com'])
+            PG.connect(dbname: ENV['postgres://pvtzmsdijepspa:3252cfb84475104c66afaaafa085b493aeebd764f3f3bf5cddd9caafe9a8ca80@ec2-35-168-77-215.compute-1.amazonaws.com:5432/d7sud06qsmgap9
+'])
           else
             PG.connect(dbname: "todos")
           end      
