@@ -14,7 +14,7 @@ class SessionPersistence
 
   def create_new_list(list_name)
     id = next_element_id(all_lists)
-    all_lists << { id: id, name: list_name, todos: [] }
+    @session[:lists] << { id: id, name: list_name, todos: [] }
   end
 
   def delete_todo_list(id)

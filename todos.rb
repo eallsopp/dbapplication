@@ -22,15 +22,7 @@ helpers do
   end
 
   def list_complete?(list)
-    todos_count(list) > 0 && todos_remaining_count(list) == 0
-  end
-
-  def todos_remaining_count(list)
-    list[:todos].select { |todo| !todo[:completed] }.size
-  end
-
-  def todos_count(list)
-    list[:todos].size
+    list[:todos_count] > 0 && list[:todos_remaining_count] == 0
   end
 
   def sort_lists(lists, &block)
@@ -121,7 +113,7 @@ get "/lists/:id" do
   @list = list
   @list_name = list[:name]
   @list_id = list[:id]
-  @todos = list[:todos]
+  @todos = @storage.find_todos_for_list(@list_id)
   erb :list, layout: :layout
 end
 
