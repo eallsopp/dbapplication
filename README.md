@@ -1,1 +1,1 @@
-Sinatra app for Todo webapp
+A To-Do list application utilizing the Sinatra framework and PostgreSQL with Ruby
